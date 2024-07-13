@@ -8,6 +8,8 @@ Malware frequently employs anti-VM techniques, which can vary in their  difficul
 
 **XenoboxX** is currently focused on 64 bits Windows, but in the future it could be extended for other platforms too.
 
+The tool has been presented at **DEFCON 32 Demo Labs**: [here](https://forum.defcon.org/node/249619)
+
 ## What you need
 
 Obviously we are speaking about physical environments, so:
