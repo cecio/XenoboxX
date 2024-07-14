@@ -97,7 +97,7 @@ Example:
 
 ## Final Notes
 
-**XenoboxX** is not the definitive analysis tool: this is a very specific approach I find useful for very specific analysis: I don't think this tool is going to replace your current workflow, but may be you'll find it useful for that specific *nasty* malware.
+**XenoboxX** is not the definitive analysis tool: this is a very specific approach I find useful for very specific analysis: I don't think this tool is going to replace your current workflow, but maybe you'll find it useful for that specific *nasty* malware.
 
 ## Contribute
 
