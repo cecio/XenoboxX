@@ -1,8 +1,6 @@
-# XenoboxX
+<h1><img width="200" alt="logo, landscape, dark text, transparent background" src="https://github.com/cecio/XenoboxX/blob/main/pics/X_logo.png?raw=true"></a></h1>
 
 Hardware Sandbox Toolkit
-
-------
 
 Malware frequently employs anti-VM techniques, which can vary in their  difficulty to detect and counteract. While integrating anti-detection  measures in our labs is a frequently used option, we should also  consider using a real hardware sandbox, even if this sounds weird. By leveraging the awesome [PCILeech](https://github.com/ufrisk/pcileech) project and DMA hardware access,  **XenoboxX** provides a suite of tools for analysis tasks, such as dumping  dynamically allocated memory and searching for IoC. These tools allow us to inject code at kernel level through DMA, making detection  significantly more challenging and giving a new perspective to the  analysis.
 
