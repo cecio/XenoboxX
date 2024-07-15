@@ -95,6 +95,29 @@ Example:
 - `-3` string minimum length. Default set to 0xA
 - `-4` search only Writable memory pages (0x0) or all (0x01). Default set to 0x0
 
+## Development
+
+If you want to modify or rebuild the **Xenobox** scripts, remember that you need some files from the **PCILeech** repository, and in particular:
+
+- `wx64_common.h`
+- `wx64_common.c`
+- `shellcode64.exe`
+
+In the comments of each `.c` file, you'll find compile instructions. As an example:
+
+```shell
+cl.exe /O1 /Os /Oy /FD /MT /GS- /J /GR- /FAcs /W4 /Zl /c /TC /kernel wx64_common.c
+
+cl.exe /O1 /Os /Oy /FD /MT /GS- /J /GR- /FAcs /W4 /Zl /c /TC /kernel wx64_dumpalloc.c
+
+ml64.exe wx64_common_a.asm /Fewx64_dumpalloc.exe /link /NODEFAULTLIB /RELEASE /MACHINE:X64 /entry:main wx64_dumpalloc.obj wx64_common.obj
+
+shellcode64.exe -o wx64_dumpalloc.exe "DUMP ALLOCATED MEMORY                                \n===============================================================\nREQUIRED OPTIONS:                                              \n  -0   : Process PID to open. Example '-0 0x0fe0'.        \nOPTIONAL OPTIONS:                                              \n  -1   : Process monitoring timeout Default: 0x20. Example:  '-1 0x100'. \n  -s   : Specify output folder/file for dumps. Example: \"\\??\C:\temp\test\"\n===== RESULT OF DUMPALLOC OPERATION ======================%s\nNTSTATUS  : 0x%08X                                             \n===============================================================\n"
+
+```
+
+
+
 ## Final Notes
 
 **XenoboxX** is not the definitive analysis tool: this is a very specific approach I find useful for very specific analysis: I don't think this tool is going to replace your current workflow, but maybe you'll find it useful for that specific *nasty* malware.
