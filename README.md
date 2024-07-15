@@ -97,7 +97,7 @@ Example:
 
 ## Development
 
-If you want to modify or rebuild the **Xenobox** scripts, remember that you need some files from the **PCILeech** repository, and in particular:
+If you want to modify or rebuild the **XenoboxX** scripts, remember that you need some files from the **PCILeech** repository, and in particular:
 
 - `wx64_common.h`
 - `wx64_common.c`
